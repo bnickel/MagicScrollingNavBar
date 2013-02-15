@@ -7,11 +7,9 @@
 //
 
 #import "SampleTableViewController.h"
+#import "MagicScrollingNavigationController.h"
 
 @interface SampleTableViewController ()
-@property (nonatomic)CGFloat initialScrollOffset;
-@property (nonatomic)CGFloat initialNavBarOffset;
-@property (nonatomic)CGFloat shouldListenToScrollEvent;
 @end
 
 @implementation SampleTableViewController
@@ -68,39 +66,22 @@
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
-    self.initialScrollOffset = scrollView.contentOffset.y;
-    self.initialNavBarOffset = self.navigationController.navigationBar.center.y;
-    self.shouldListenToScrollEvent = YES;
+    [self.magicScrollingNavController scrollViewWillBeginDragging:scrollView];
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    if (!decelerate) {
-        self.shouldListenToScrollEvent = NO;
-    }
+    [self.magicScrollingNavController scrollViewDidEndDragging:scrollView willDecelerate:decelerate];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    self.shouldListenToScrollEvent = NO;
+    [self.magicScrollingNavController scrollViewDidEndDecelerating:scrollView];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    if (!self.shouldListenToScrollEvent) {
-        return;
-    }
-    
-    UINavigationBar *navBar = self.navigationController.navigationBar;
-    CGFloat currentScrollOffset = scrollView.contentOffset.y;
-    CGFloat scrollDelta = currentScrollOffset - self.initialScrollOffset;
-    CGFloat navBarOffset = self.initialNavBarOffset - scrollDelta;
-    
-    CGFloat navBarHeight = CGRectGetHeight(navBar.bounds);
-    
-    CGPoint navBarCenter = navBar.center;
-    navBarCenter.y = MIN(navBarHeight / 2 + 20, MAX(-navBarHeight / 2 + 20, navBarOffset));
-    navBar.center = navBarCenter;
+    [self.magicScrollingNavController scrollViewDidScroll:scrollView];
 }
 
 @end

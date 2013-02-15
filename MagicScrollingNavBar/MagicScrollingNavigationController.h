@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MagicScrollingNavigationController : UINavigationController
+@interface MagicScrollingNavigationController : UINavigationController<UIScrollViewDelegate>
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView;
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate;
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView;
+@end
 
+@interface UIViewController (MagicScrollingNavigationController)
+- (MagicScrollingNavigationController *)magicScrollingNavController;
 @end
