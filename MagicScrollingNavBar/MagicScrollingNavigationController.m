@@ -69,6 +69,23 @@
     }
 }
 
+- (void)fixNavigationBarIfPartiallyObscured
+{
+    __weak UINavigationBar *navBar = self.navigationBar;
+    CGPoint navBarCenter = navBar.center;
+    CGFloat navBarHeight = CGRectGetHeight(navBar.bounds);
+    
+    CGFloat minNavBarCenterY = -navBarHeight / 2 + 20;
+    if (ABS(navBarCenter.y - minNavBarCenterY) > 0.5) {
+        
+        navBarCenter.y = navBarHeight / 2 + 20;
+        
+        [UIView animateWithDuration:UINavigationControllerHideShowBarDuration animations:^{
+            navBar.center = navBarCenter;
+        }];
+    }
+}
+
 #pragma mark - Scroll view delegate
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
@@ -82,6 +99,7 @@
 {
     if (!decelerate && scrollView == self.scrollViewOfInterest) {
         self.scrollViewOfInterest = nil;
+        [self fixNavigationBarIfPartiallyObscured];
     }
 }
 
@@ -89,6 +107,7 @@
 {
     if (scrollView == self.scrollViewOfInterest) {
         self.scrollViewOfInterest = nil;
+        [self fixNavigationBarIfPartiallyObscured];
     }
 }
 
