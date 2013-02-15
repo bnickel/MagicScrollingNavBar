@@ -78,8 +78,10 @@
     CGFloat scrollDelta = currentScrollOffset - self.initialScrollOffset;
     CGFloat navBarOffset = self.initialNavBarOffset - scrollDelta;
     
+    CGFloat navBarHeight = CGRectGetHeight(navBar.bounds);
+    
     CGPoint navBarCenter = navBar.center;
-    navBarCenter.y = navBarOffset;
+    navBarCenter.y = MIN(navBarHeight / 2 + 20, MAX(-navBarHeight / 2 + 20, navBarOffset));
     navBar.center = navBarCenter;
 }
 
