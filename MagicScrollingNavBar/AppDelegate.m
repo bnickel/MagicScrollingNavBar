@@ -10,6 +10,9 @@
 #import "SampleTableViewController.h"
 #import "MagicScrollingNavigationController.h"
 
+@interface AppDelegate () <UINavigationControllerDelegate>
+@end
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -19,10 +22,17 @@
     
     
     // Your code goes here.
+    navigationController.delegate = self;
+    [navigationController setNavigationBarHidden:YES animated:NO];
     
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    [navigationController setNavigationBarHidden:navigationController.viewControllers.count == 1 animated:YES];
 }
 
 @end
