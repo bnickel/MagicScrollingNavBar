@@ -26,28 +26,45 @@
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     [super pushViewController:viewController animated:animated];
-    [self fixNavigationBarPosition];
+    [self fixNavigationBarPositionAnimated:animated];
 }
 
 - (void)setViewControllers:(NSArray *)viewControllers
 {
     [super setViewControllers:viewControllers];
-    [self fixNavigationBarPosition];
+    [self fixNavigationBarPositionAnimated:NO];
+}
+
+- (void)setViewControllers:(NSArray *)viewControllers animated:(BOOL)animated
+{
+    [super setViewControllers:viewControllers animated:animated];
+    [self fixNavigationBarPositionAnimated:animated];
 }
 
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated
 {
     UIViewController *controller = [super popViewControllerAnimated:animated];
-    [self fixNavigationBarPosition];
+    [self fixNavigationBarPositionAnimated:animated];
     return controller;
 }
 
-- (void)fixNavigationBarPosition
+- (void)fixNavigationBarPositionAnimated:(BOOL)animated
 {
-    CGPoint navBarCenter = self.navigationBar.center;
-    CGFloat navBarHeight = CGRectGetHeight(self.navigationBar.bounds);
-    navBarCenter.y = navBarHeight / 2 + 20;
-    self.navigationBar.center = navBarCenter;
+    __weak UINavigationBar *navBar = self.navigationBar;
+    CGPoint navBarCenter = navBar.center;
+    CGFloat navBarHeight = CGRectGetHeight(navBar.bounds);
+    CGFloat newNavBarCenterY = navBarHeight / 2 + 20;
+    
+    // If the difference between the current and the new center is more than half a pixel, animate to the new position.
+    if (ABS(newNavBarCenterY - navBarCenter.y) > 0.5 && animated) {
+        navBarCenter.y = newNavBarCenterY;
+        
+        [UIView animateWithDuration:0.35 animations:^{
+            navBar.center = navBarCenter;
+        }];
+    } else {
+        navBar.center = navBarCenter;
+    }
 }
 
 @end
