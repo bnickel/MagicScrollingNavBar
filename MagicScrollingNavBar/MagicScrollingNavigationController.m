@@ -9,8 +9,7 @@
 #import "MagicScrollingNavigationController.h"
 
 @interface MagicScrollingNavigationController ()
-@property (nonatomic)CGFloat initialScrollOffset;
-@property (nonatomic)CGFloat initialNavBarOffset;
+@property (nonatomic)CGFloat lastScrollOffset;
 @property (nonatomic, weak)UIScrollView *scrollViewOfInterest;
 @end
 
@@ -90,8 +89,7 @@
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
-    self.initialScrollOffset = scrollView.contentOffset.y;
-    self.initialNavBarOffset = self.navigationBar.center.y;
+    self.lastScrollOffset = scrollView.contentOffset.y;
     self.scrollViewOfInterest = scrollView;
 }
 
@@ -119,14 +117,15 @@
     
     UINavigationBar *navBar = self.navigationBar;
     CGFloat currentScrollOffset = scrollView.contentOffset.y;
-    CGFloat scrollDelta = currentScrollOffset - self.initialScrollOffset;
-    CGFloat navBarOffset = self.initialNavBarOffset - scrollDelta;
+    CGFloat scrollDelta = currentScrollOffset - self.lastScrollOffset;
     
     CGFloat navBarHeight = CGRectGetHeight(navBar.bounds);
     
     CGPoint navBarCenter = navBar.center;
-    navBarCenter.y = MIN(navBarHeight / 2 + 20, MAX(-navBarHeight / 2 + 20, navBarOffset));
+    navBarCenter.y = MIN(navBarHeight / 2 + 20, MAX(-navBarHeight / 2 + 20, navBarCenter.y - scrollDelta));
     navBar.center = navBarCenter;
+    
+    self.lastScrollOffset = currentScrollOffset;
 }
 
 @end
