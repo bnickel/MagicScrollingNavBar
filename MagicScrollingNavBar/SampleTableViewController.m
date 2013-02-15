@@ -9,7 +9,8 @@
 #import "SampleTableViewController.h"
 
 @interface SampleTableViewController ()
-
+@property (nonatomic)CGFloat initialScrollOffset;
+@property (nonatomic)CGFloat initialNavBarOffset;
 @end
 
 @implementation SampleTableViewController
@@ -60,6 +61,26 @@
     UIViewController *child = [[[self class] alloc] init];
     child.title = [NSString stringWithFormat:@"Section %d, Row %d", indexPath.section, indexPath.row];
     [self.navigationController pushViewController:child animated:YES];
+}
+
+#pragma mark - Scroll view delegate
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    self.initialScrollOffset = scrollView.contentOffset.y;
+    self.initialNavBarOffset = self.navigationController.navigationBar.center.y;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    UINavigationBar *navBar = self.navigationController.navigationBar;
+    CGFloat currentScrollOffset = scrollView.contentOffset.y;
+    CGFloat scrollDelta = currentScrollOffset - self.initialScrollOffset;
+    CGFloat navBarOffset = self.initialNavBarOffset - scrollDelta;
+    
+    CGPoint navBarCenter = navBar.center;
+    navBarCenter.y = navBarOffset;
+    navBar.center = navBarCenter;
 }
 
 @end
