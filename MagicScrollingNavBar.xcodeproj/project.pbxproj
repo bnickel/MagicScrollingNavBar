@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EB78662516CDF09200E6B78A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB78662416CDF09200E6B78A /* UIKit.framework */; };
+		EB78662716CDF09200E6B78A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB78662616CDF09200E6B78A /* Foundation.framework */; };
+		EB78662916CDF09200E6B78A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB78662816CDF09200E6B78A /* CoreGraphics.framework */; };
+		EB78662F16CDF09200E6B78A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB78662D16CDF09200E6B78A /* InfoPlist.strings */; };
+		EB78663116CDF09200E6B78A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB78663016CDF09200E6B78A /* main.m */; };
+		EB78663516CDF09200E6B78A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB78663416CDF09200E6B78A /* AppDelegate.m */; };
+		EB78663716CDF09200E6B78A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = EB78663616CDF09200E6B78A /* Default.png */; };
+		EB78663916CDF09200E6B78A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB78663816CDF09200E6B78A /* Default@2x.png */; };
+		EB78663B16CDF09200E6B78A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB78663A16CDF09200E6B78A /* Default-568h@2x.png */; };
+		EB78664916CDF0E800E6B78A /* SampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB78664816CDF0E800E6B78A /* SampleTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EB78662116CDF09200E6B78A /* MagicScrollingNavBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicScrollingNavBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB78662416CDF09200E6B78A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EB78662616CDF09200E6B78A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EB78662816CDF09200E6B78A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EB78662C16CDF09200E6B78A /* MagicScrollingNavBar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MagicScrollingNavBar-Info.plist"; sourceTree = "<group>"; };
+		EB78662E16CDF09200E6B78A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EB78663016CDF09200E6B78A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EB78663216CDF09200E6B78A /* MagicScrollingNavBar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MagicScrollingNavBar-Prefix.pch"; sourceTree = "<group>"; };
+		EB78663316CDF09200E6B78A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EB78663416CDF09200E6B78A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EB78663616CDF09200E6B78A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		EB78663816CDF09200E6B78A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		EB78663A16CDF09200E6B78A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		EB78664716CDF0E800E6B78A /* SampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleTableViewController.h; sourceTree = "<group>"; };
+		EB78664816CDF0E800E6B78A /* SampleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB78661E16CDF09200E6B78A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB78662516CDF09200E6B78A /* UIKit.framework in Frameworks */,
+				EB78662716CDF09200E6B78A /* Foundation.framework in Frameworks */,
+				EB78662916CDF09200E6B78A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EB78661816CDF09200E6B78A = {
+			isa = PBXGroup;
+			children = (
+				EB78662A16CDF09200E6B78A /* MagicScrollingNavBar */,
+				EB78662316CDF09200E6B78A /* Frameworks */,
+				EB78662216CDF09200E6B78A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EB78662216CDF09200E6B78A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB78662116CDF09200E6B78A /* MagicScrollingNavBar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB78662316CDF09200E6B78A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB78662416CDF09200E6B78A /* UIKit.framework */,
+				EB78662616CDF09200E6B78A /* Foundation.framework */,
+				EB78662816CDF09200E6B78A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB78662A16CDF09200E6B78A /* MagicScrollingNavBar */ = {
+			isa = PBXGroup;
+			children = (
+				EB78663316CDF09200E6B78A /* AppDelegate.h */,
+				EB78663416CDF09200E6B78A /* AppDelegate.m */,
+				EB78662B16CDF09200E6B78A /* Supporting Files */,
+				EB78664716CDF0E800E6B78A /* SampleTableViewController.h */,
+				EB78664816CDF0E800E6B78A /* SampleTableViewController.m */,
+			);
+			path = MagicScrollingNavBar;
+			sourceTree = "<group>";
+		};
+		EB78662B16CDF09200E6B78A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB78662C16CDF09200E6B78A /* MagicScrollingNavBar-Info.plist */,
+				EB78662D16CDF09200E6B78A /* InfoPlist.strings */,
+				EB78663016CDF09200E6B78A /* main.m */,
+				EB78663216CDF09200E6B78A /* MagicScrollingNavBar-Prefix.pch */,
+				EB78663616CDF09200E6B78A /* Default.png */,
+				EB78663816CDF09200E6B78A /* Default@2x.png */,
+				EB78663A16CDF09200E6B78A /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EB78662016CDF09200E6B78A /* MagicScrollingNavBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB78664416CDF09200E6B78A /* Build configuration list for PBXNativeTarget "MagicScrollingNavBar" */;
+			buildPhases = (
+				EB78661D16CDF09200E6B78A /* Sources */,
+				EB78661E16CDF09200E6B78A /* Frameworks */,
+				EB78661F16CDF09200E6B78A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MagicScrollingNavBar;
+			productName = MagicScrollingNavBar;
+			productReference = EB78662116CDF09200E6B78A /* MagicScrollingNavBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB78661916CDF09200E6B78A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Brian Nickel";
+			};
+			buildConfigurationList = EB78661C16CDF09200E6B78A /* Build configuration list for PBXProject "MagicScrollingNavBar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EB78661816CDF09200E6B78A;
+			productRefGroup = EB78662216CDF09200E6B78A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB78662016CDF09200E6B78A /* MagicScrollingNavBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB78661F16CDF09200E6B78A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB78662F16CDF09200E6B78A /* InfoPlist.strings in Resources */,
+				EB78663716CDF09200E6B78A /* Default.png in Resources */,
+				EB78663916CDF09200E6B78A /* Default@2x.png in Resources */,
+				EB78663B16CDF09200E6B78A /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB78661D16CDF09200E6B78A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB78663116CDF09200E6B78A /* main.m in Sources */,
+				EB78663516CDF09200E6B78A /* AppDelegate.m in Sources */,
+				EB78664916CDF0E800E6B78A /* SampleTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EB78662D16CDF09200E6B78A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB78662E16CDF09200E6B78A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EB78664216CDF09200E6B78A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EB78664316CDF09200E6B78A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EB78664516CDF09200E6B78A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MagicScrollingNavBar/MagicScrollingNavBar-Prefix.pch";
+				INFOPLIST_FILE = "MagicScrollingNavBar/MagicScrollingNavBar-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EB78664616CDF09200E6B78A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MagicScrollingNavBar/MagicScrollingNavBar-Prefix.pch";
+				INFOPLIST_FILE = "MagicScrollingNavBar/MagicScrollingNavBar-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB78661C16CDF09200E6B78A /* Build configuration list for PBXProject "MagicScrollingNavBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB78664216CDF09200E6B78A /* Debug */,
+				EB78664316CDF09200E6B78A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB78664416CDF09200E6B78A /* Build configuration list for PBXNativeTarget "MagicScrollingNavBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB78664516CDF09200E6B78A /* Debug */,
+				EB78664616CDF09200E6B78A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EB78661916CDF09200E6B78A /* Project object */;
+}
