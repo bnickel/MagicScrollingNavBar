@@ -8,17 +8,17 @@
 
 #import "AppDelegate.h"
 #import "SampleTableViewController.h"
+#import "MagicScrollingNavigationController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[SampleTableViewController alloc] init]];
+    UINavigationController *navigationController = [[MagicScrollingNavigationController alloc] initWithRootViewController:[[SampleTableViewController alloc] init]];
     
     
     // Your code goes here.
-    navigationController.navigationBar.translucent = YES;
     
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];

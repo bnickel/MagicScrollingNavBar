@@ -17,6 +17,7 @@
 		EB78663916CDF09200E6B78A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB78663816CDF09200E6B78A /* Default@2x.png */; };
 		EB78663B16CDF09200E6B78A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB78663A16CDF09200E6B78A /* Default-568h@2x.png */; };
 		EB78664916CDF0E800E6B78A /* SampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB78664816CDF0E800E6B78A /* SampleTableViewController.m */; };
+		EB78664C16CDFC6700E6B78A /* MagicScrollingNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB78664B16CDFC6700E6B78A /* MagicScrollingNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		EB78663A16CDF09200E6B78A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		EB78664716CDF0E800E6B78A /* SampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleTableViewController.h; sourceTree = "<group>"; };
 		EB78664816CDF0E800E6B78A /* SampleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleTableViewController.m; sourceTree = "<group>"; };
+		EB78664A16CDFC6700E6B78A /* MagicScrollingNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicScrollingNavigationController.h; sourceTree = "<group>"; };
+		EB78664B16CDFC6700E6B78A /* MagicScrollingNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicScrollingNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				EB78662B16CDF09200E6B78A /* Supporting Files */,
 				EB78664716CDF0E800E6B78A /* SampleTableViewController.h */,
 				EB78664816CDF0E800E6B78A /* SampleTableViewController.m */,
+				EB78664A16CDFC6700E6B78A /* MagicScrollingNavigationController.h */,
+				EB78664B16CDFC6700E6B78A /* MagicScrollingNavigationController.m */,
 			);
 			path = MagicScrollingNavBar;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 				EB78663116CDF09200E6B78A /* main.m in Sources */,
 				EB78663516CDF09200E6B78A /* AppDelegate.m in Sources */,
 				EB78664916CDF0E800E6B78A /* SampleTableViewController.m in Sources */,
+				EB78664C16CDFC6700E6B78A /* MagicScrollingNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

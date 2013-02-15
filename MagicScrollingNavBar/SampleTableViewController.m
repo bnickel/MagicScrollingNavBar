@@ -11,6 +11,7 @@
 @interface SampleTableViewController ()
 @property (nonatomic)CGFloat initialScrollOffset;
 @property (nonatomic)CGFloat initialNavBarOffset;
+@property (nonatomic)CGFloat shouldListenToScrollEvent;
 @end
 
 @implementation SampleTableViewController
@@ -69,10 +70,27 @@
 {
     self.initialScrollOffset = scrollView.contentOffset.y;
     self.initialNavBarOffset = self.navigationController.navigationBar.center.y;
+    self.shouldListenToScrollEvent = YES;
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    if (!decelerate) {
+        self.shouldListenToScrollEvent = NO;
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    self.shouldListenToScrollEvent = NO;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    if (!self.shouldListenToScrollEvent) {
+        return;
+    }
+    
     UINavigationBar *navBar = self.navigationController.navigationBar;
     CGFloat currentScrollOffset = scrollView.contentOffset.y;
     CGFloat scrollDelta = currentScrollOffset - self.initialScrollOffset;
