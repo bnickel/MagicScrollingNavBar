@@ -18,6 +18,7 @@
     
     
     // Your code goes here.
+    navigationController.navigationBar.translucent = YES;
     
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
